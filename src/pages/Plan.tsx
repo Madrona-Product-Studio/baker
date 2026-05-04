@@ -38,7 +38,7 @@ export function Plan() {
     if (!plan) return;
     const trail = TRAILS.find((t) => t.id === plan.route);
     const text = [
-      `🏔 Baker Trip Plan`,
+      `🏔 HikerLink Trip Plan`,
       `Route: ${trail?.name ?? plan.route}`,
       `Party size: ${plan.partySize}`,
       `Departure: ${formatDT(plan.departureTime)}`,
@@ -47,7 +47,7 @@ export function Plan() {
     ].filter(Boolean).join('\n');
 
     if (navigator.share) {
-      await navigator.share({ title: 'Baker Trip Plan', text });
+      await navigator.share({ title: 'HikerLink Trip Plan', text });
     } else {
       await navigator.clipboard.writeText(text);
       alert('Trip plan copied to clipboard');

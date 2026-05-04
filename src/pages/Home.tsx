@@ -14,7 +14,7 @@ export function Home() {
       <OfflineBanner />
 
       <div className="px-4 pt-6">
-        <h1 className="font-mono text-2xl font-bold text-primary tracking-tight">Baker</h1>
+        <h1 className="font-mono text-2xl font-bold text-primary tracking-tight">HikerLink</h1>
         <p className="text-secondary text-sm mt-1 italic">Know before you go. And after.</p>
       </div>
 

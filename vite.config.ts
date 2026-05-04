@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/*.png'],
       manifest: {
-        name: 'Baker',
-        short_name: 'Baker',
+        name: 'HikerLink',
+        short_name: 'HikerLink',
         description: 'Trail companion for Mount Baker hikers',
         theme_color: '#0f1318',
         background_color: '#0f1318',
