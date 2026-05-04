@@ -1,0 +1,48 @@
+import type { CheckIn } from '../lib/storage';
+
+export const MOCK_FEED: CheckIn[] = [
+  {
+    id: 'mock-1',
+    route: 'chain-lakes',
+    waypoint: 'Bagley Lakes Junction',
+    condition: 'good',
+    note: 'Snow on the ridge past mile 4, microspikes helpful',
+    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+    lat: 48.8485,
+    lng: -121.6925,
+    source: 'network',
+  },
+  {
+    id: 'mock-2',
+    route: 'artist-point',
+    waypoint: 'Artist Point Summit',
+    condition: 'good',
+    note: 'Wildflowers are insane right now, worth every step',
+    timestamp: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(),
+    lat: 48.8495,
+    lng: -121.6927,
+    source: 'network',
+  },
+  {
+    id: 'mock-3',
+    route: 'ptarmigan-ridge',
+    waypoint: 'Camp Kiser',
+    condition: 'heads-up',
+    note: 'Strong wind above 6k, turned back at Camp Kiser',
+    timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(),
+    lat: 48.8312,
+    lng: -121.7541,
+    source: 'peer',
+  },
+  {
+    id: 'mock-4',
+    route: 'railroad-grade',
+    waypoint: 'Moraine Edge',
+    condition: 'heads-up',
+    note: 'Trail clear to moraine, stream crossing at mile 3 is thigh-deep',
+    timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
+    lat: 48.7768,
+    lng: -121.8144,
+    source: 'network',
+  },
+];
