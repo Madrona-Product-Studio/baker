@@ -27,28 +27,28 @@ export function Feed() {
       <OfflineBanner />
 
       <div className="px-4 pt-6">
-        <h2 className="font-mono text-lg font-bold text-primary">Trail Feed</h2>
-        <p className="text-sm text-secondary mt-1">Conditions from other hikers</p>
+        <h2 className="font-sans text-lg font-semibold text-forest">Trail Feed</h2>
+        <p className="text-sm text-stone mt-1">Conditions from other hikers</p>
       </div>
 
       <div className="px-4 flex gap-2">
-        <div className="flex bg-surface border border-white/5 rounded-lg overflow-hidden text-xs font-mono">
+        <div className="flex bg-cream border border-snow rounded-full overflow-hidden text-xs font-mono">
           {(['all', 'mine'] as const).map((v) => (
             <button
               key={v}
               onClick={() => setRouteFilter(v)}
-              className={`px-3 py-1.5 transition-colors ${routeFilter === v ? 'bg-baker-blue text-white' : 'text-secondary'}`}
+              className={`px-3 py-1.5 transition-colors ${routeFilter === v ? 'bg-trail text-cream' : 'text-stone'}`}
             >
               {v === 'all' ? 'All trails' : 'My route'}
             </button>
           ))}
         </div>
-        <div className="flex bg-surface border border-white/5 rounded-lg overflow-hidden text-xs font-mono">
+        <div className="flex bg-cream border border-snow rounded-full overflow-hidden text-xs font-mono">
           {(['today', 'week'] as const).map((v) => (
             <button
               key={v}
               onClick={() => setTimeFilter(v)}
-              className={`px-3 py-1.5 transition-colors ${timeFilter === v ? 'bg-baker-blue text-white' : 'text-secondary'}`}
+              className={`px-3 py-1.5 transition-colors ${timeFilter === v ? 'bg-trail text-cream' : 'text-stone'}`}
             >
               {v === 'today' ? 'Today' : 'This week'}
             </button>
@@ -59,8 +59,8 @@ export function Feed() {
       <div className="px-4 space-y-3 pb-4">
         {filtered.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-secondary text-sm">No reports yet for today.</p>
-            <p className="text-secondary text-xs mt-1">Be the first — check in on your way down.</p>
+            <p className="text-stone text-sm">No reports yet for today.</p>
+            <p className="text-stone text-xs mt-1">Be the first — check in on your way down.</p>
           </div>
         ) : (
           filtered.map((c) => <CheckInCard key={c.id} checkIn={c} />)

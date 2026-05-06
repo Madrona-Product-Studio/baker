@@ -11,36 +11,36 @@ function timeAgo(iso: string): string {
 }
 
 const RISK_COLORS: Record<string, string> = {
-  low: 'text-emerald-400',
-  moderate: 'text-yellow-400',
-  considerable: 'text-amber-400',
-  high: 'text-red-400',
-  extreme: 'text-red-300 font-bold',
+  low: 'text-trail',
+  moderate: 'text-sun',
+  considerable: 'text-sun',
+  high: 'text-alert',
+  extreme: 'text-alert font-bold',
 };
 
 export function WeatherCard({ weather }: { weather: CachedWeather }) {
   return (
-    <div className="bg-surface border border-white/5 rounded-lg p-4 space-y-3">
+    <div className="bg-cream border border-snow rounded-lg p-4 space-y-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Cloud size={18} className="text-baker-blue" />
-          <h3 className="font-mono text-sm font-medium text-primary">Mt. Baker Conditions</h3>
+          <Cloud size={18} className="text-trail" />
+          <h3 className="font-mono text-sm font-medium text-forest">Mt. Baker Conditions</h3>
         </div>
-        <span className="text-xs text-secondary">Updated {timeAgo(weather.updatedAt)}</span>
+        <span className="text-xs text-stone">Updated {timeAgo(weather.updatedAt)}</span>
       </div>
 
-      <p className="text-sm text-secondary leading-relaxed">{weather.forecast}</p>
+      <p className="text-sm text-stone leading-relaxed">{weather.forecast}</p>
 
-      <div className="flex items-start gap-2 bg-white/5 rounded-md p-3">
-        <AlertTriangle size={16} className="text-amber-400 shrink-0 mt-0.5" />
+      <div className="flex items-start gap-2 bg-sun/10 rounded-md p-3">
+        <AlertTriangle size={16} className="text-sun shrink-0 mt-0.5" />
         <div>
-          <p className="text-xs font-mono">
+          <p className="text-xs font-mono text-forest">
             Avalanche risk:{' '}
             <span className={RISK_COLORS[weather.avalancheRisk]}>
               {weather.avalancheRisk.toUpperCase()}
             </span>
           </p>
-          <p className="text-xs text-secondary mt-1">{weather.avalancheSummary}</p>
+          <p className="text-xs text-stone mt-1">{weather.avalancheSummary}</p>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const links = [
 
 export function BottomNav() {
   return (
-    <nav className="fixed bottom-0 inset-x-0 bg-surface border-t border-white/5 pb-[env(safe-area-inset-bottom)]">
+    <nav className="fixed bottom-0 inset-x-0 bg-cream border-t border-snow pb-[env(safe-area-inset-bottom)]">
       <div className="flex justify-around items-center h-14">
         {links.map(({ to, icon: Icon, label }) => (
           <NavLink
@@ -21,11 +21,11 @@ export function BottomNav() {
               `flex flex-col items-center gap-0.5 text-[10px] transition-colors duration-150 ${
                 isActive
                   ? label === 'SOS'
-                    ? 'text-signal-red'
-                    : 'text-baker-blue'
+                    ? 'text-alert'
+                    : 'text-trail'
                   : label === 'SOS'
-                    ? 'text-red-400/60'
-                    : 'text-secondary'
+                    ? 'text-alert/50'
+                    : 'text-stone'
               }`
             }
           >

@@ -14,8 +14,8 @@ export default defineConfig({
         name: 'HikerLink',
         short_name: 'HikerLink',
         description: 'Trail companion for Mount Baker hikers',
-        theme_color: '#0f1318',
-        background_color: '#0f1318',
+        theme_color: '#FAF7EF',
+        background_color: '#FAF7EF',
         display: 'standalone',
         orientation: 'portrait',
         icons: [

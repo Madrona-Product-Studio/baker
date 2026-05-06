@@ -9,7 +9,7 @@ import { Emergency } from './pages/Emergency';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-background text-primary pb-16">
+      <div className="min-h-screen bg-paper text-forest pb-16">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/plan" element={<Plan />} />

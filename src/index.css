@@ -1,24 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f1318;
-  --color-surface: #1c2128;
-  --color-baker-blue: #4a8fa8;
-  --color-trail-amber: #d4882a;
-  --color-signal-red: #c0392b;
-  --color-primary: #e8eaed;
-  --color-secondary: #8b9299;
+  --color-trail: #2B7A4B;
+  --color-forest: #1F2D24;
+  --color-bark: #3E2F22;
+  --color-cream: #F5EFE3;
+  --color-paper: #FAF7EF;
+  --color-stone: #8C8579;
+  --color-alpine: #FFFFFF;
+  --color-glacier: #C8D7CC;
+  --color-snow: #E8E4D9;
+  --color-sun: #E8A24B;
+  --color-alert: #B8463A;
 
-  --font-mono: 'DM Mono', 'Space Mono', ui-monospace, monospace;
-  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
 }
 
 @layer base {
   body {
     margin: 0;
     font-family: var(--font-sans);
-    background: var(--color-background);
-    color: var(--color-primary);
+    background: var(--color-paper);
+    color: var(--color-forest);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -32,13 +41,13 @@
   select,
   input,
   textarea {
-    background: var(--color-surface);
-    color: var(--color-primary);
+    background: var(--color-alpine);
+    color: var(--color-forest);
     outline: none;
   }
 
   select option {
-    background: var(--color-surface);
-    color: var(--color-primary);
+    background: var(--color-alpine);
+    color: var(--color-forest);
   }
 }
