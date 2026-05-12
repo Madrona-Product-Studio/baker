@@ -11,7 +11,7 @@ const links = [
 
 export function BottomNav() {
   return (
-    <nav className="fixed bottom-0 inset-x-0 bg-cream border-t border-snow pb-[env(safe-area-inset-bottom)]">
+    <nav className="sticky bottom-0 bg-cream border-t border-snow pb-[env(safe-area-inset-bottom)]">
       <div className="flex justify-around items-center h-14">
         {links.map(({ to, icon: Icon, label }) => (
           <NavLink

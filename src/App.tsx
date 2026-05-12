@@ -9,14 +9,16 @@ import { Emergency } from './pages/Emergency';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-paper text-forest pb-16">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/plan" element={<Plan />} />
-          <Route path="/feed" element={<Feed />} />
-          <Route path="/checkin" element={<CheckIn />} />
-          <Route path="/emergency" element={<Emergency />} />
-        </Routes>
+      <div className="min-h-svh bg-paper text-forest flex flex-col">
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/plan" element={<Plan />} />
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/checkin" element={<CheckIn />} />
+            <Route path="/emergency" element={<Emergency />} />
+          </Routes>
+        </div>
         <BottomNav />
       </div>
     </BrowserRouter>
